@@ -88,8 +88,10 @@ public class ActivityRecognitionLocationProvider extends AbstractLocationProvide
 
         if (lastActivity.getType() == DetectedActivity.STILL) {
             handleStationary(location);
-            stopTracking();
-            return;
+            if (mConfig.getStopOnStillActivity()) {
+                stopTracking();
+                return;
+            }
         }
 
         showDebugToast("acy:" + location.getAccuracy() + ",v:" + location.getSpeed());
