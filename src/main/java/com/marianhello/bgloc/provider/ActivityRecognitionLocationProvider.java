@@ -56,6 +56,7 @@ public class ActivityRecognitionLocationProvider extends AbstractLocationProvide
     @Override
     public void onStart() {
         logger.info("Start recording");
+        logger.info("MASTERCRAFT X2 Start recording");
         this.isStarted = true;
         attachRecorder();
     }
