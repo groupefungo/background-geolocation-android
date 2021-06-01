@@ -86,13 +86,13 @@ public class ActivityRecognitionLocationProvider extends AbstractLocationProvide
     public void onLocationChanged(Location location) {
         logger.debug("Location change: {}", location.toString());
 
-        if (lastActivity.getType() == DetectedActivity.STILL) {
-            handleStationary(location);
-            if (mConfig.getStopOnStillActivity()) {
-//                 stopTracking();
-                return;
-            }
-        }
+//        if (lastActivity.getType() == DetectedActivity.STILL) {
+//            handleStationary(location);
+//            if (mConfig.getStopOnStillActivity()) {
+////                 stopTracking();
+//                return;
+//            }
+//        }
 
         showDebugToast("acy:" + location.getAccuracy() + ",v:" + location.getSpeed());
 
